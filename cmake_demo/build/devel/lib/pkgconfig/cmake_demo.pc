@@ -1,0 +1,8 @@
+prefix=/home/yyj/coding_ws/src/cmake_demo/build/devel
+
+Name: cmake_demo
+Description: Description of cmake_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
