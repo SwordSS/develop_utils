@@ -1,0 +1,5 @@
+<launch>     
+      <node name="carto_topic_test" pkg="serial_test" type="carto_topic_test" output="log"/>
+      <node name="base_controller" pkg="serial_test" type="base_controller"  output="screen"/>
+      <node pkg="rosbag" type="play" name="rosbag" args="/home/aiqianliyan/test_scan.bag"/>
+</launch>
