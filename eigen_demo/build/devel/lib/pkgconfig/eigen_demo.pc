@@ -1,0 +1,8 @@
+prefix=/home/yyj/coding_ws/src/develop_utils/eigen_demo/build/devel
+
+Name: eigen_demo
+Description: Description of eigen_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

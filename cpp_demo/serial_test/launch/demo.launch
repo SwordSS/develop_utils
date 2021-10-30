@@ -1,6 +1,0 @@
-<launch>
-   <node name="dashgo_driver" pkg="dashgo_driver" type="dashgo_driver.py" output="screen">
-      <rosparam file="$(find serial_test)/config/my_dashgo_params.yaml" command="load" />
-   </node>
-
-</launch>

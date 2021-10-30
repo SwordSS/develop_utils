@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yyj/coding_ws/src/cmake_demo
+CMAKE_SOURCE_DIR = /home/yyj/coding_ws/src/develop_utils/cmake_demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yyj/coding_ws/src/cmake_demo/build
+CMAKE_BINARY_DIR = /home/yyj/coding_ws/src/develop_utils/cmake_demo/build
 
 # Utility rule file for doxygen.
 
@@ -67,6 +67,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/yyj/coding_ws/src/cmake_demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yyj/coding_ws/src/cmake_demo /home/yyj/coding_ws/src/cmake_demo /home/yyj/coding_ws/src/cmake_demo/build /home/yyj/coding_ws/src/cmake_demo/build /home/yyj/coding_ws/src/cmake_demo/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yyj/coding_ws/src/develop_utils/cmake_demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yyj/coding_ws/src/develop_utils/cmake_demo /home/yyj/coding_ws/src/develop_utils/cmake_demo /home/yyj/coding_ws/src/develop_utils/cmake_demo/build /home/yyj/coding_ws/src/develop_utils/cmake_demo/build /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 

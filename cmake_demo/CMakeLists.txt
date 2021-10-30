@@ -113,60 +113,49 @@ catkin_package(
 ###########
 ## Build ##
 ###########
+
+### note 设置输出的lib和bin的路径
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY   ${PROJECT_SOURCE_DIR}/bin)
 
-## Specify additional locations of header files
-## Your package locations should be listed before other locations
+### note cpp文件查找头文件查找位置
 include_directories(
   #${PROJECT_SOURCE_DIR}/include
   ${PROJECT_SOURCE_DIR}/include/cmake_demo
   ${catkin_INCLUDE_DIRS}
 )
 
-## Declare a C++ library
-add_library(other SHARED
-  src/other.cpp
-)
+### note 生成lib库 SHARED为so动态库，STATIC为a静态库
+# add_library(other SHARED
+#   src/other.cpp
+# )
 
-add_library(test SHARED
-   src/test.cpp
-   src/other.cpp
-)
+#  add_library(test SHARED
+#     src/test.cpp
+#     src/other.cpp
+#  )
 
+### note 这为赋值变量，常用于一堆东西处理
 set(allcpp
 src/main.cpp 
 src/test.cpp 
 src/other.cpp
 )
 
+### note 该为链接库查找头文件的位置
 # link_directories( 
 #   ${PROJECT_SOURCE_DIR}/include
 #   ${PROJECT_SOURCE_DIR}/include/cmake_demo 
 # )
 
-## Add cmake target dependencies of the library
-## as an example, code may need to be generated before libraries
-## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-## Declare a C++ executable
-## With catkin_make all packages are built within a single CMake context
-## The recommended prefix ensures that target names across packages don't collide
-#add_subdirectory(testlib)
-
+### note 生成指定的可执行文件
 add_executable(all ${allcpp})
 
-## Rename C++ executable without prefix
-## The above recommended prefix causes long target names, the following renames the
-## target back to the shorter version for ease of user use
-## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
-# set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
 
-## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Specify libraries to link a library or executable target against
+### note 该为链接对应的库文件，用到库文件的时候就用到，一般都是
+### note include + add_exe + target_link_lib(头文件，生成执行文件，库链接)三步骤
+### note 套路为，生成库文件和生成可执行文件可以分开来算
  target_link_libraries(all
    ${catkin_LIBRARIES}
  )

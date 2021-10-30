@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yyj/coding_ws/src/cmake_demo
+CMAKE_SOURCE_DIR = /home/yyj/coding_ws/src/develop_utils/cmake_demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yyj/coding_ws/src/cmake_demo/build
+CMAKE_BINARY_DIR = /home/yyj/coding_ws/src/develop_utils/cmake_demo/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/all.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/all.dir/flags.make
 
 CMakeFiles/all.dir/src/main.cpp.o: CMakeFiles/all.dir/flags.make
 CMakeFiles/all.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yyj/coding_ws/src/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/all.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/all.dir/src/main.cpp.o -c /home/yyj/coding_ws/src/cmake_demo/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/all.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/all.dir/src/main.cpp.o -c /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/main.cpp
 
 CMakeFiles/all.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/all.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yyj/coding_ws/src/cmake_demo/src/main.cpp > CMakeFiles/all.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/main.cpp > CMakeFiles/all.dir/src/main.cpp.i
 
 CMakeFiles/all.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/all.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yyj/coding_ws/src/cmake_demo/src/main.cpp -o CMakeFiles/all.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/main.cpp -o CMakeFiles/all.dir/src/main.cpp.s
 
 CMakeFiles/all.dir/src/test.cpp.o: CMakeFiles/all.dir/flags.make
 CMakeFiles/all.dir/src/test.cpp.o: ../src/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yyj/coding_ws/src/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/all.dir/src/test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/all.dir/src/test.cpp.o -c /home/yyj/coding_ws/src/cmake_demo/src/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/all.dir/src/test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/all.dir/src/test.cpp.o -c /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/test.cpp
 
 CMakeFiles/all.dir/src/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/all.dir/src/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yyj/coding_ws/src/cmake_demo/src/test.cpp > CMakeFiles/all.dir/src/test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/test.cpp > CMakeFiles/all.dir/src/test.cpp.i
 
 CMakeFiles/all.dir/src/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/all.dir/src/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yyj/coding_ws/src/cmake_demo/src/test.cpp -o CMakeFiles/all.dir/src/test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/test.cpp -o CMakeFiles/all.dir/src/test.cpp.s
 
 CMakeFiles/all.dir/src/other.cpp.o: CMakeFiles/all.dir/flags.make
 CMakeFiles/all.dir/src/other.cpp.o: ../src/other.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yyj/coding_ws/src/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/all.dir/src/other.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/all.dir/src/other.cpp.o -c /home/yyj/coding_ws/src/cmake_demo/src/other.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/all.dir/src/other.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/all.dir/src/other.cpp.o -c /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/other.cpp
 
 CMakeFiles/all.dir/src/other.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/all.dir/src/other.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yyj/coding_ws/src/cmake_demo/src/other.cpp > CMakeFiles/all.dir/src/other.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/other.cpp > CMakeFiles/all.dir/src/other.cpp.i
 
 CMakeFiles/all.dir/src/other.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/all.dir/src/other.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yyj/coding_ws/src/cmake_demo/src/other.cpp -o CMakeFiles/all.dir/src/other.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yyj/coding_ws/src/develop_utils/cmake_demo/src/other.cpp -o CMakeFiles/all.dir/src/other.cpp.s
 
 # Object files for target all
 all_OBJECTS = \
@@ -129,7 +129,7 @@ all_EXTERNAL_OBJECTS =
 ../bin/all: /usr/lib/x86_64-linux-gnu/libpthread.so
 ../bin/all: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 ../bin/all: CMakeFiles/all.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yyj/coding_ws/src/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/all"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/all"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/all.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -142,6 +142,6 @@ CMakeFiles/all.dir/clean:
 .PHONY : CMakeFiles/all.dir/clean
 
 CMakeFiles/all.dir/depend:
-	cd /home/yyj/coding_ws/src/cmake_demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yyj/coding_ws/src/cmake_demo /home/yyj/coding_ws/src/cmake_demo /home/yyj/coding_ws/src/cmake_demo/build /home/yyj/coding_ws/src/cmake_demo/build /home/yyj/coding_ws/src/cmake_demo/build/CMakeFiles/all.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yyj/coding_ws/src/develop_utils/cmake_demo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yyj/coding_ws/src/develop_utils/cmake_demo /home/yyj/coding_ws/src/develop_utils/cmake_demo /home/yyj/coding_ws/src/develop_utils/cmake_demo/build /home/yyj/coding_ws/src/develop_utils/cmake_demo/build /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles/all.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/all.dir/depend
 

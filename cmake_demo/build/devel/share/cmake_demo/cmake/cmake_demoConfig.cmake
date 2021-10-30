@@ -67,8 +67,8 @@ set(cmake_demo_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(cmake_demo_SOURCE_PREFIX /home/yyj/coding_ws/src/cmake_demo)
-  set(cmake_demo_DEVEL_PREFIX /home/yyj/coding_ws/src/cmake_demo/build/devel)
+  set(cmake_demo_SOURCE_PREFIX /home/yyj/coding_ws/src/develop_utils/cmake_demo)
+  set(cmake_demo_DEVEL_PREFIX /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/devel)
   set(cmake_demo_INSTALL_PREFIX "")
   set(cmake_demo_PREFIX ${cmake_demo_DEVEL_PREFIX})
 else()
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'cmake_demo' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'cmake_demo' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/yyj/coding_ws/src/cmake_demo/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'cmake_demo' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/yyj/coding_ws/src/develop_utils/cmake_demo/${idir}'.  ${_report}")
     endif()
     _list_append_unique(cmake_demo_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yyj/coding_ws/src/cmake_demo/build/devel/lib;/home/yyj/coding_ws/devel/lib;/home/yyj/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/devel/lib;/home/yyj/coding_ws/devel/lib;/home/yyj/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

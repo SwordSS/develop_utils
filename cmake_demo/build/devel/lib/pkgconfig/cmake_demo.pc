@@ -1,4 +1,4 @@
-prefix=/home/yyj/coding_ws/src/cmake_demo/build/devel
+prefix=/home/yyj/coding_ws/src/develop_utils/cmake_demo/build/devel
 
 Name: cmake_demo
 Description: Description of cmake_demo

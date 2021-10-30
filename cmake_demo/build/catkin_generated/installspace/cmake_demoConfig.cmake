@@ -67,8 +67,8 @@ set(cmake_demo_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(cmake_demo_SOURCE_PREFIX /home/yyj/coding_ws/src/cmake_demo)
-  set(cmake_demo_DEVEL_PREFIX /home/yyj/coding_ws/src/cmake_demo/build/devel)
+  set(cmake_demo_SOURCE_PREFIX /home/yyj/coding_ws/src/develop_utils/cmake_demo)
+  set(cmake_demo_DEVEL_PREFIX /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/devel)
   set(cmake_demo_INSTALL_PREFIX "")
   set(cmake_demo_PREFIX ${cmake_demo_DEVEL_PREFIX})
 else()
