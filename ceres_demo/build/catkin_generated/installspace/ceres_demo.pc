@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: ceres_demo
+Description: Description of ceres_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/yyj/coding_ws/src/develop_utils/ceres_demo/build/devel
+
+Name: ceres_demo
+Description: Description of ceres_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
