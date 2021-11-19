@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/cmake_demo/Other.h
+
+../include/cmake_demo/OtherGroup.h
+Other.h
+../include/cmake_demo/Other.h
+
+/home/yyj/下载/develop_utils/cmake_demo/src/Other.cpp
+iostream
+-
+Other.h
+/home/yyj/下载/develop_utils/cmake_demo/src/Other.h
+
+/home/yyj/下载/develop_utils/cmake_demo/src/OtherGroup.cpp
+iostream
+-
+OtherGroup.h
+/home/yyj/下载/develop_utils/cmake_demo/src/OtherGroup.h
+

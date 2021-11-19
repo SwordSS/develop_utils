@@ -118,6 +118,16 @@ catkin_package(
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY   ${PROJECT_SOURCE_DIR}/bin)
 
+#打印一些路径变量
+#lib路径（自定义变量）
+message("----- CMAKE_LIBRARY_OUTPUT_DIRECTORY is " ${CMAKE_LIBRARY_OUTPUT_DIRECTORY} "-----")
+#lib路径（自定义变量）
+message("----- CMAKE_RUNTIME_OUTPUT_DIRECTORY is " ${CMAKE_RUNTIME_OUTPUT_DIRECTORY} "-----")
+#当前工程路径（与cmake版本相关）
+message("----- CMAKE_CURRENT_SOURCE_DIR is " ${CMAKE_CURRENT_SOURCE_DIR} "-----")
+#当前工程路径（与cmake版本相关）
+message("----- PROJECT_SOURCE_DIR is " ${PROJECT_SOURCE_DIR} "-----")
+
 ### note cpp文件查找头文件查找位置
 include_directories(
   #${PROJECT_SOURCE_DIR}/include
@@ -125,21 +135,15 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+#设置变量
+set (all_src 
+  ${PROJECT_SOURCE_DIR}/src/Other.cpp
+  ${PROJECT_SOURCE_DIR}/src/OtherGroup.cpp
+)
+
 ### note 生成lib库 SHARED为so动态库，STATIC为a静态库
-# add_library(other SHARED
-#   src/other.cpp
-# )
-
-#  add_library(test SHARED
-#     src/test.cpp
-#     src/other.cpp
-#  )
-
-### note 这为赋值变量，常用于一堆东西处理
-set(allcpp
-src/main.cpp 
-src/test.cpp 
-src/other.cpp
+add_library(othergroup SHARED
+  ${all_src}
 )
 
 ### note 该为链接库查找头文件的位置
@@ -148,17 +152,18 @@ src/other.cpp
 #   ${PROJECT_SOURCE_DIR}/include/cmake_demo 
 # )
 
-
 ### note 生成指定的可执行文件
-add_executable(all ${allcpp})
-
+add_executable(main 
+  ${PROJECT_SOURCE_DIR}/src/main.cpp 
+  ${all_src}
+)
 
 ### note 该为链接对应的库文件，用到库文件的时候就用到，一般都是
 ### note include + add_exe + target_link_lib(头文件，生成执行文件，库链接)三步骤
 ### note 套路为，生成库文件和生成可执行文件可以分开来算
- target_link_libraries(all
-   ${catkin_LIBRARIES}
- )
+target_link_libraries(main
+  ${catkin_LIBRARIES}
+)
 
 
 #############

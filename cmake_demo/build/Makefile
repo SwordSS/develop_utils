@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yyj/coding_ws/src/develop_utils/cmake_demo
+CMAKE_SOURCE_DIR = /home/yyj/下载/develop_utils/cmake_demo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yyj/coding_ws/src/develop_utils/cmake_demo/build
+CMAKE_BINARY_DIR = /home/yyj/下载/develop_utils/cmake_demo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,11 +124,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles /home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yyj/coding_ws/src/develop_utils/cmake_demo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -155,19 +166,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named all
-
-# Build rule for target.
-all: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 all
-.PHONY : all
-
-# fast build rule for target.
-all/fast:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/build
-.PHONY : all/fast
 
 #=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
@@ -222,6 +220,19 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -248,32 +259,6 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named test
-
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
-
-# fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
-
-#=============================================================================
-# Target rules for targets named download_extra_data
-
-# Build rule for target.
-download_extra_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
-.PHONY : download_extra_data
-
-# fast build rule for target.
-download_extra_data/fast:
-	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
-.PHONY : download_extra_data/fast
-
-#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -285,6 +270,32 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 std_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named doxygen
+
+# Build rule for target.
+doxygen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doxygen
+.PHONY : doxygen
+
+# fast build rule for target.
+doxygen/fast:
+	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
+.PHONY : doxygen/fast
+
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -417,43 +428,30 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named doxygen
+# Target rules for targets named download_extra_data
 
 # Build rule for target.
-doxygen: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 doxygen
-.PHONY : doxygen
+download_extra_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 download_extra_data
+.PHONY : download_extra_data
 
 # fast build rule for target.
-doxygen/fast:
-	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
-.PHONY : doxygen/fast
+download_extra_data/fast:
+	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
+.PHONY : download_extra_data/fast
 
 #=============================================================================
-# Target rules for targets named run_tests
+# Target rules for targets named othergroup
 
 # Build rule for target.
-run_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests
-.PHONY : run_tests
+othergroup: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 othergroup
+.PHONY : othergroup
 
 # fast build rule for target.
-run_tests/fast:
-	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
-.PHONY : run_tests/fast
-
-#=============================================================================
-# Target rules for targets named other
-
-# Build rule for target.
-other: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 other
-.PHONY : other
-
-# fast build rule for target.
-other/fast:
-	$(MAKE) -f CMakeFiles/other.dir/build.make CMakeFiles/other.dir/build
-.PHONY : other/fast
+othergroup/fast:
+	$(MAKE) -f CMakeFiles/othergroup.dir/build.make CMakeFiles/othergroup.dir/build
+.PHONY : othergroup/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -507,13 +505,73 @@ gtest_main/fast:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/Other.o: src/Other.cpp.o
+
+.PHONY : src/Other.o
+
+# target to build an object file
+src/Other.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Other.cpp.o
+	$(MAKE) -f CMakeFiles/othergroup.dir/build.make CMakeFiles/othergroup.dir/src/Other.cpp.o
+.PHONY : src/Other.cpp.o
+
+src/Other.i: src/Other.cpp.i
+
+.PHONY : src/Other.i
+
+# target to preprocess a source file
+src/Other.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Other.cpp.i
+	$(MAKE) -f CMakeFiles/othergroup.dir/build.make CMakeFiles/othergroup.dir/src/Other.cpp.i
+.PHONY : src/Other.cpp.i
+
+src/Other.s: src/Other.cpp.s
+
+.PHONY : src/Other.s
+
+# target to generate assembly for a file
+src/Other.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Other.cpp.s
+	$(MAKE) -f CMakeFiles/othergroup.dir/build.make CMakeFiles/othergroup.dir/src/Other.cpp.s
+.PHONY : src/Other.cpp.s
+
+src/OtherGroup.o: src/OtherGroup.cpp.o
+
+.PHONY : src/OtherGroup.o
+
+# target to build an object file
+src/OtherGroup.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/OtherGroup.cpp.o
+	$(MAKE) -f CMakeFiles/othergroup.dir/build.make CMakeFiles/othergroup.dir/src/OtherGroup.cpp.o
+.PHONY : src/OtherGroup.cpp.o
+
+src/OtherGroup.i: src/OtherGroup.cpp.i
+
+.PHONY : src/OtherGroup.i
+
+# target to preprocess a source file
+src/OtherGroup.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/OtherGroup.cpp.i
+	$(MAKE) -f CMakeFiles/othergroup.dir/build.make CMakeFiles/othergroup.dir/src/OtherGroup.cpp.i
+.PHONY : src/OtherGroup.cpp.i
+
+src/OtherGroup.s: src/OtherGroup.cpp.s
+
+.PHONY : src/OtherGroup.s
+
+# target to generate assembly for a file
+src/OtherGroup.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/OtherGroup.cpp.s
+	$(MAKE) -f CMakeFiles/othergroup.dir/build.make CMakeFiles/othergroup.dir/src/OtherGroup.cpp.s
+.PHONY : src/OtherGroup.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -522,7 +580,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -531,71 +589,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/other.o: src/other.cpp.o
-
-.PHONY : src/other.o
-
-# target to build an object file
-src/other.cpp.o:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/other.cpp.o
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/other.cpp.o
-	$(MAKE) -f CMakeFiles/other.dir/build.make CMakeFiles/other.dir/src/other.cpp.o
-.PHONY : src/other.cpp.o
-
-src/other.i: src/other.cpp.i
-
-.PHONY : src/other.i
-
-# target to preprocess a source file
-src/other.cpp.i:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/other.cpp.i
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/other.cpp.i
-	$(MAKE) -f CMakeFiles/other.dir/build.make CMakeFiles/other.dir/src/other.cpp.i
-.PHONY : src/other.cpp.i
-
-src/other.s: src/other.cpp.s
-
-.PHONY : src/other.s
-
-# target to generate assembly for a file
-src/other.cpp.s:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/other.cpp.s
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/other.cpp.s
-	$(MAKE) -f CMakeFiles/other.dir/build.make CMakeFiles/other.dir/src/other.cpp.s
-.PHONY : src/other.cpp.s
-
-src/test.o: src/test.cpp.o
-
-.PHONY : src/test.o
-
-# target to build an object file
-src/test.cpp.o:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/test.cpp.o
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.o
-.PHONY : src/test.cpp.o
-
-src/test.i: src/test.cpp.i
-
-.PHONY : src/test.i
-
-# target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/test.cpp.i
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
-
-src/test.s: src/test.cpp.s
-
-.PHONY : src/test.s
-
-# target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) -f CMakeFiles/all.dir/build.make CMakeFiles/all.dir/src/test.cpp.s
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
 
 # Help Target
 help:
@@ -609,16 +604,17 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... all"
+	@echo "... test"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... clean_test_results"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... main"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_eus"
-	@echo "... test"
-	@echo "... download_extra_data"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... doxygen"
+	@echo "... run_tests"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -629,22 +625,21 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
-	@echo "... doxygen"
-	@echo "... run_tests"
-	@echo "... other"
+	@echo "... download_extra_data"
+	@echo "... othergroup"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/Other.o"
+	@echo "... src/Other.i"
+	@echo "... src/Other.s"
+	@echo "... src/OtherGroup.o"
+	@echo "... src/OtherGroup.i"
+	@echo "... src/OtherGroup.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/other.o"
-	@echo "... src/other.i"
-	@echo "... src/other.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
 .PHONY : help
 
 
