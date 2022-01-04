@@ -24,3 +24,11 @@ iostream
 OtherGroup.h
 /home/yyj/下载/develop_utils/cmake_demo/src/OtherGroup.h
 
+/home/yyj/下载/develop_utils/cmake_demo/src/main.cpp
+iostream
+-
+string
+-
+OtherGroup.h
+/home/yyj/下载/develop_utils/cmake_demo/src/OtherGroup.h
+

@@ -1,24 +1,24 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_b3914/fast && /usr/bin/make -f CMakeFiles/cmTC_b3914.dir/build.make CMakeFiles/cmTC_b3914.dir/build
+Run Build Command(s):/usr/bin/make cmTC_7d4ac/fast && /usr/bin/make -f CMakeFiles/cmTC_7d4ac.dir/build.make CMakeFiles/cmTC_7d4ac.dir/build
 make[1]: Entering directory '/home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b3914.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b3914.dir/src.c.o   -c /home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b3914
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3914.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_b3914.dir/src.c.o  -o cmTC_b3914 
-CMakeFiles/cmTC_b3914.dir/src.c.o：在函数‘main’中：
+Building C object CMakeFiles/cmTC_7d4ac.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7d4ac.dir/src.c.o   -c /home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7d4ac
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d4ac.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_7d4ac.dir/src.c.o  -o cmTC_7d4ac 
+CMakeFiles/cmTC_7d4ac.dir/src.c.o：在函数‘main’中：
 src.c:(.text+0x3c)：对‘pthread_create’未定义的引用
 src.c:(.text+0x48)：对‘pthread_detach’未定义的引用
 src.c:(.text+0x59)：对‘pthread_join’未定义的引用
 src.c:(.text+0x6d)：对‘pthread_atfork’未定义的引用
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_b3914.dir/build.make:86: recipe for target 'cmTC_b3914' failed
-make[1]: *** [cmTC_b3914] Error 1
+CMakeFiles/cmTC_7d4ac.dir/build.make:86: recipe for target 'cmTC_7d4ac' failed
+make[1]: *** [cmTC_7d4ac] Error 1
 make[1]: Leaving directory '/home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_b3914/fast' failed
-make: *** [cmTC_b3914/fast] Error 2
+Makefile:121: recipe for target 'cmTC_7d4ac/fast' failed
+make: *** [cmTC_7d4ac/fast] Error 2
 
 
 Source file was:
@@ -44,20 +44,20 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_cde00/fast && /usr/bin/make -f CMakeFiles/cmTC_cde00.dir/build.make CMakeFiles/cmTC_cde00.dir/build
+Run Build Command(s):/usr/bin/make cmTC_acaf3/fast && /usr/bin/make -f CMakeFiles/cmTC_acaf3.dir/build.make CMakeFiles/cmTC_acaf3.dir/build
 make[1]: Entering directory '/home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cde00.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cde00.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.15/Modules/CheckFunctionExists.c
-Linking C executable cmTC_cde00
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cde00.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_cde00.dir/CheckFunctionExists.c.o  -o cmTC_cde00 -lpthreads 
+Building C object CMakeFiles/cmTC_acaf3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_acaf3.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.15/Modules/CheckFunctionExists.c
+Linking C executable cmTC_acaf3
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acaf3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_acaf3.dir/CheckFunctionExists.c.o  -o cmTC_acaf3 -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_cde00.dir/build.make:86: recipe for target 'cmTC_cde00' failed
-make[1]: *** [cmTC_cde00] Error 1
+CMakeFiles/cmTC_acaf3.dir/build.make:86: recipe for target 'cmTC_acaf3' failed
+make[1]: *** [cmTC_acaf3] Error 1
 make[1]: Leaving directory '/home/yyj/下载/develop_utils/cmake_demo/build/CMakeFiles/CMakeTmp'
-Makefile:121: recipe for target 'cmTC_cde00/fast' failed
-make: *** [cmTC_cde00/fast] Error 2
+Makefile:121: recipe for target 'cmTC_acaf3/fast' failed
+make: *** [cmTC_acaf3/fast] Error 2
 
 
 
