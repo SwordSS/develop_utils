@@ -6,6 +6,8 @@
     - ceres库文件下载
   - https://blog.csdn.net/weixin_43991178/article/details/100532618
     - 官方翻译
+  - https://blog.csdn.net/hjwang1/article/details/107869743
+    - Ceres中的LocalParameterization
 - 构建
   - ResidualBlock
     - 说明：即一个残差块
@@ -53,3 +55,20 @@
   - int Solver :: Options :: min_linear_solver_iterations
   - int Solver :: Options :: max_linear_solver_iterations
   - Solver::Summary::FullReport()
+- 代码
+  - options
+    - max_num_iterations （int）最大迭代次数
+    - linear_solver_type （#define）线性求解器
+      - ceres::DENSE_QR
+    - minimizer_progress_to_stdout （bool）输出报告
+  - Summary
+    - FullReport() 全部报告
+    - BriefReport() 主要报告
+  - 鲁棒核
+    - CauchyLoss
+    - HuberLoss
+    - TrivialLoss
+    - SoftLOneLoss
+    - CauchyLoss
+    - ArctanLoss
+    - TolerantLoss
