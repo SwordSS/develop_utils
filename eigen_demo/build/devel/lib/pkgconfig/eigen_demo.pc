@@ -1,4 +1,4 @@
-prefix=/home/yyj/coding_ws/src/develop_utils/eigen_demo/build/devel
+prefix=/home/yyj/下载/develop_utils/eigen_demo/build/devel
 
 Name: eigen_demo
 Description: Description of eigen_demo

@@ -59,5 +59,18 @@ int main()
 
     std::cout <<q2m <<std::endl;
 
+    // 两向量求解之间的变换矩阵
+    Eigen::Vector3d v_x;
+    v_x << 1,0,0; 
+    Eigen::AngleAxisd axisd_x2xpi(M_PI/4,Eigen::Vector3d(0,0,1));
+    Eigen::Matrix3d R_x2xpi = axisd_x2xpi.matrix();
+    Eigen::Vector3d v_x_pi = R_x2xpi* v_x;
+
+    Eigen::Matrix3d R_x2xpi_;
+    R_x2xpi_ = Eigen::Quaterniond::FromTwoVectors(v_x, v_x_pi).toRotationMatrix();//四元数换算
+    std::cout << "R_x2xpi:" <<std::endl <<R_x2xpi<<std::endl;
+    std::cout << "R_x2xpi_:" <<std::endl <<R_x2xpi_<<std::endl;
+
+
     return 0;
 }

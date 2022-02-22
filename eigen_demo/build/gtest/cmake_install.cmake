@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/yyj/coding_ws/src/develop_utils/eigen_demo/build/gtest/gtest/cmake_install.cmake")
+  include("/home/yyj/下载/develop_utils/eigen_demo/build/gtest/gtest/cmake_install.cmake")
 
 endif()
 
